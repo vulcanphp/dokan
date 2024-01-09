@@ -2,7 +2,7 @@
 
 Dokan is a lightweight and user-friendly online e-commerce PHP web application. It provides a simple and intuitive platform for businesses to set up their online stores and sell products effortlessly.
 
-[Dokan Live Demo](http://dokan.free.nf) - [Admin Panel Demo](http://dokan.free.nf) (password: admin)
+[Dokan Live Demo](http://dokan.free.nf) - [Admin Panel Demo](http://dokan.free.nf/admin/) (password: admin)
 
 ![home](https://github.com/vulcanphp/dokan/assets/128284645/43b469f6-7872-491c-9123-ba15d494aab0)
 ![checkout](https://github.com/vulcanphp/dokan/assets/128284645/1b4e33b3-b733-4662-b202-5d6150c913f4)
