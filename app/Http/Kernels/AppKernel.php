@@ -16,10 +16,10 @@ class AppKernel implements IKernel
 {
     public function boot(): void
     {
-        // CoPlay App Configurator
+        // Dokan App Configurator
         $config = Configurator::configure();
 
-        // configure CoPlay
+        // configure Dokan
         if (!$config->isConfigured() && url()->getPath() != '/admin/') {
             redirect('admin');
         }

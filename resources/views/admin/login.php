@@ -3,7 +3,7 @@
 use App\Core\Configurator;
 
 $this->layout('admin.layout')
-    ->block('title', 'Login - ' . Configurator::$instance->get('title', 'CoPlay'));
+    ->block('title', 'Login - ' . Configurator::$instance->get('title', 'Dokan'));
 ?>
 
 <div class="w-full h-screen flex items-center justify-center">

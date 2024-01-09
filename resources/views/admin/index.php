@@ -4,7 +4,7 @@ use App\Core\Configurator;
 
 $this
     ->layout('admin.layout')
-    ->block('title', 'Admin - ' . Configurator::$instance->get('title', 'CoPlay'))
+    ->block('title', 'Admin - ' . Configurator::$instance->get('title', 'Dokan'))
     ->with(['config' => $config])
 ?>
 
