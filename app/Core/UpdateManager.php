@@ -99,7 +99,6 @@ class UpdateManager
         foreach ([
             'config/app.php',
             'config/database.php',
-            'storage/cooplay.json',
         ] as $file) {
             $zip->addFile(root_dir($file), $file);
         }
