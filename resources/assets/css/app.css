@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    
+}
+
+.pagination{
+    @apply flex items-center;
+}
+
+.pagination .page-item .page-link{
+    @apply text-gray-200 font-semibold text-lg hover:bg-xamber-700/50 m-1 inline-flex items-center justify-center bg-xbg-600 w-10 h-10 rounded-full;
+}
+
+.pagination .page-item.active .page-link{
+    @apply bg-xamber-700;
+}
