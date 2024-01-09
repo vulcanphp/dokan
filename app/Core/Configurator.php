@@ -20,7 +20,7 @@ class Configurator
                 ->load(
                     'loaded',
                     fn () => Option::get()
-                        ->mapWithKeys(fn ($option) => [$option->name => $option->value])
+                        ->mapWithKeys(fn ($option) => [$option->name => decode_string($option->value)])
                         ->all()
                 );
         } catch (Exception $e) {
@@ -93,7 +93,7 @@ class Configurator
     {
         if ($this->isChanged) {
             Option::create(
-                collect($this->data)->map(fn ($value, $name) => ['name' => $name, 'value' => $value])->all(),
+                collect($this->data)->map(fn ($value, $name) => ['name' => $name, 'value' => encode_string($value)])->all(),
                 ['conflict' => ['name'], 'update' => ['value' => 'value']]
             );
             Option::Cache()->flush();
