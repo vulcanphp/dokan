@@ -1,6 +1,7 @@
 <?php
 
 use VulcanPhp\SweetView\Drivers\FireDriver;
+use VulcanPhp\SweetView\Drivers\HtmlDriver;
 use VulcanPhp\SweetView\SweetView;
 
 if (!function_exists('sweet_view_root_dir')) {
@@ -13,10 +14,7 @@ if (!function_exists('sweet_view_root_dir')) {
 if (!function_exists('view')) {
     function view(...$args)
     {
-        $engine = SweetView::create(new FireDriver);
-        $engine->getDriver()
-            ->getEngine()
-            ->extension('.php');
+        $engine = SweetView::create(new HtmlDriver);
         return func_num_args() == 0 ? $engine : $engine->render(...$args);
     }
 }
