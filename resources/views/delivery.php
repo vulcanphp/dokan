@@ -11,7 +11,7 @@ $this
 <section x-data="{track: $persist(''), trackLoading: false, trackResult(){
     this.trackLoading = true
     fetch('/myorders?keyword=' + this.track).then(res => res.text()).then(html => {
-        document.querySelector('#trackResult').innerHTML = html, this.trackLoading = false;
+        document.querySelector('#trackResult').innerHTML = html, this.trackLoading = false, window.fireView.checkFireLinks();
     });
 }}">
     <div class="w-full sm:w-10/12 md:w-8/12 lg:w-6/12 mx-auto">

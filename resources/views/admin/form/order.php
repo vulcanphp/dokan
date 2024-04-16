@@ -10,7 +10,7 @@
             <input type="number" name="phone" x-model="order.phone" required class="mb-4 w-full px-4 py-2 outline-none text-center focus:outline-xamber-700 rounded-full bg-xbg-700" placeholder="<?= translate('Order Phone') ?>">
             <textarea name="address" x-model="order.address" class="mb-4 w-full px-4 py-2 outline-none focus:outline-xamber-700 rounded-3xl bg-xbg-700" placeholder="Order Address"></textarea>
             <select name="status" x-model="order.status" required class="mb-4 w-full px-4 py-2 outline-none text-center focus:outline-xamber-700 rounded-full bg-xbg-700">
-                <?php foreach (['pending', 'waiting', 'canceled', 'completed'] as $id) : ?>
+                <?php foreach (['pending', 'processing', 'shipped', 'delivered', 'canceled'] as $id) : ?>
                     <option value="<?= $id ?>"><?= ucfirst($id) ?></option>
                 <?php endforeach ?>
             </select>

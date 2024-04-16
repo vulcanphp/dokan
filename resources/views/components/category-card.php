@@ -1,4 +1,4 @@
-<a href="<?= $category->getSlug() ?>" class="flex items-center <?= $active ? 'bg-xbg-600' : 'bg-xbg-700 hover:bg-xbg-600' ?> rounded-2xl px-4 py-2 m-[8px] transition ease-in-out duration-150">
+<a fire href="<?= $category->getSlug() ?>" class="flex items-center <?= $active ? 'bg-xbg-600' : 'bg-xbg-700 hover:bg-xbg-600' ?> rounded-2xl px-4 py-2 m-[8px] transition ease-in-out duration-150">
     <?php if (isset($category->image)) : ?>
         <img class="w-[40px] h-[40px] rounded-full" src="<?= storage_url($category->image) ?>" alt="<?= $category->title ?>">
     <?php else : ?>

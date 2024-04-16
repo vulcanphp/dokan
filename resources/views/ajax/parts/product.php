@@ -2,7 +2,7 @@
 
 use App\Core\Currency;
 ?>
-<a href="<?= $product->getSlug() ?>" class="flex px-1 py-1 group-hover:opacity-80 hover:opacity-[1!important] transition ease-in-out duration-100 <?= !$first ? 'border-t border-xbg-600 pt-3 mt-2' : '' ?>">
+<a fire @click="isOpen = false" href="<?= $product->getSlug() ?>" class="flex px-1 py-1 group-hover:opacity-80 hover:opacity-[1!important] transition ease-in-out duration-100 <?= !$first ? 'border-t border-xbg-600 pt-3 mt-2' : '' ?>">
     <div class="w-3/12">
         <img src="<?= storage_url($product->imageSize(200, 200)) ?>" alt="<?= $product->title ?><" class="w-full rounded">
     </div>

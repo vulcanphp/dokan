@@ -14,7 +14,6 @@ if (!isset($config)) {
         ->setMeta('language', __lang())
         ->setMeta('url', url()->absoluteUrl())
         ->setMeta('sitename', $config->get('title', 'Dokan'))
-        ->setMeta('title', $config->get('title', 'Dokan') . ' - ' . $config->get('tagline', 'Buy Now, Pay Later'))
         ->setMeta('description', $config->get('description', 'Best online shopping store at resounding discounts All across World with cash on delivery.'))
         ->siteMeta()
     ?>
@@ -24,6 +23,7 @@ if (!isset($config)) {
             display: none !important;
         }
     </style>
+    <?= fire_link() ?>
     <?= mixer()
         ->enque('css', resource_url('assets/dist/bundle.min.css'))
         ->deque('css')
@@ -39,7 +39,7 @@ if (!isset($config)) {
 <?php $this->include('layout.header') ?>
 
 <main class="container my-5">
-    {{content}}
+    <div fire="content">{{content}}</div>
 </main>
 
 <?php $this->include('layout.footer') ?>

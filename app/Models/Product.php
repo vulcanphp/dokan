@@ -38,7 +38,13 @@ class Product extends Model
             $upload = storage()->upload('image')[0];
 
             // set uploaded product image
-            $this->load(['image' => str_ireplace(storage_dir(), '', $upload)]);
+            $this->load([
+                'image' => str_ireplace(
+                    [storage_dir(), '\\'],
+                    ['', '/'],
+                    $upload
+                )
+            ]);
 
             // create product thumbs
             Image::bulkResize($upload, [

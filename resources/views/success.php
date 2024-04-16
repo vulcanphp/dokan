@@ -22,5 +22,5 @@ $this
 </div>
 
 <div class="text-center mb-4">
-    <a href="<?= home_url() ?>" class="bg-xamber-700 hover:bg-xamber-800 px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold text-lg md:text-xl inline-block"><?= translate('Continue Shopping') ?></a>
+    <a fire href="<?= home_url() ?>" class="bg-xamber-700 hover:bg-xamber-800 px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold text-lg md:text-xl inline-block"><?= translate('Continue Shopping') ?></a>
 </div>

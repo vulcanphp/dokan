@@ -1,8 +1,12 @@
 <?php
 
+use App\Core\Configurator;
+
 $this
     ->layout('layout.master')
-    ->block('title', 'Welcome to Dokan')
+    ->setupMeta([
+        'title' => Configurator::$instance->get('title', 'Dokan') . ' - ' . Configurator::$instance->get('tagline', 'Buy Now, Pay Later')
+    ])
     ->with([
         'categories' => $categories,
         'products' => $products,

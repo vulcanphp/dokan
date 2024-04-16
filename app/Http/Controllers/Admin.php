@@ -173,7 +173,7 @@ class Admin
                 ->string('email', 80)->key('email')->nullable()
                 ->string('phone', 40)->key('phone')->nullable()
                 ->string('address', 255)->nullable()
-                ->enum('status', ['pending', 'waiting', 'canceled', 'completed'])->default('pending')
+                ->enum('status', ['pending', 'processing', 'shipped', 'delivered', 'canceled'])->default('pending')
                 ->timestamp('ordered_at')
                 ->build()
         );
@@ -187,7 +187,7 @@ class Admin
                 ->decimal('total', '6,2')
                 ->string('method', 50)->key('payment_method')
                 ->string('payment_id', 255)->key('payment_id')
-                ->enum('status', ['pending', 'due', 'unpaid', 'paid', 'refund'])->default('pending')
+                ->enum('status', ['pending', 'processing', 'unpaid', 'paid', 'canceled'])->default('pending')
                 ->timestamp('created_at')
                 ->build()
         );

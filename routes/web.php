@@ -18,5 +18,5 @@ Route::post('/order', [Home::class, 'order'])->name('order');
 Route::get('/category/{category}', [Home::class, 'index'])->name('category');
 Route::form('/search/', [Home::class, 'search'])->name('search');
 Route::view('/delivery/', 'delivery')->name('delivery');
-Route::form('/myorders/', [Home::class, 'myorders'])->name('myorders');
+Route::form('/myorders/', [Home::class, 'myOrders'])->name('myorders');
 Route::get('/{id}', [Home::class, 'product'])->name('product');

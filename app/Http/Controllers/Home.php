@@ -95,7 +95,7 @@ class Home
         return Invoice::webHtml(base64_decode($id));
     }
 
-    public function myorders()
+    public function myOrders()
     {
         $keyword = trim(input('keyword', ''));
 

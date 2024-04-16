@@ -25,7 +25,7 @@ use App\Core\Payments\Payments;
                 <?php endforeach ?>
             </select>
             <select name="status" x-model="payment.status" required class="mb-4 w-full px-4 py-2 outline-none text-center focus:outline-xamber-700 rounded-full bg-xbg-700">
-                <?php foreach (['pending', 'due', 'unpaid', 'paid', 'refund'] as $id) : ?>
+                <?php foreach (['pending', 'processing', 'unpaid', 'paid', 'cancelled'] as $id) : ?>
                     <option value="<?= $id ?>"><?= ucfirst($id) ?></option>
                 <?php endforeach ?>
             </select>

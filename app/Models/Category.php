@@ -36,8 +36,8 @@ class Category extends Model
             // upload image
             $this->load([
                 'image' => str_ireplace(
-                    storage_dir(),
-                    '',
+                    [storage_dir(), '\\'],
+                    ['', '/'],
                     storage()->upload('image')[0]
                 )
             ]);
