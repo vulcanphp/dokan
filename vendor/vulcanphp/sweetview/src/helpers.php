@@ -14,7 +14,8 @@ if (!function_exists('sweet_view_root_dir')) {
 if (!function_exists('view')) {
     function view(...$args)
     {
-        $engine = SweetView::create(new HtmlDriver);
+        $engine = SweetView::create(new FireDriver);
+        $engine->getDriver()->getEngine()->extension('.php');
         return func_num_args() == 0 ? $engine : $engine->render(...$args);
     }
 }
