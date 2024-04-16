@@ -28,7 +28,7 @@ $this
         <div>
             <p class="font-semibold"><?= translate('Payment') ?></p>
             <p class="text-sm text-gray-700"><?= Payments::$instance->getPayment($invoice->getOrder('method'))->getTitle() ?></p>
-            <p class="text-sm text-gray-700"><?= translate('Status') ?>: <span class="uppercase font-bold <?= ['paid' => 'text-green-600', 'due' => 'text-rose-500'][$status = $invoice->getOrder('payment_status')] ?? 'text-gray-500' ?>"><?= translate($status) ?></span></p>
+            <p class="text-sm text-gray-700"><?= translate('Status') ?>: <span class="uppercase font-bold <?= ['paid' => 'text-green-600', 'unpaid' => 'text-rose-500'][$status = $invoice->getOrder('payment_status')] ?? 'text-gray-500' ?>"><?= translate($status) ?></span></p>
         </div>
     </div>
 </div>
